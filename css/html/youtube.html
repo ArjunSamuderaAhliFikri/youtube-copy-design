@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<!-- <link rel="stylesheet" href="youtube.css"> -->
+<style type="text/tailwindcss">
+    .swipe {
+        @apply translate-x-0;
+    }
+</style>
+</head>
+<body class="bg-neutral-700 sm:overflow-y-scroll xl:overflow-x-hidden">
+    <div class="relative">
+        <nav class="w-full h-24 flex justify-between items-center bg-neutral-900 sm:w-full">
+            <div class="flex justify-between items-center w-1/8 gap-1 m-5">
+                <div class=" p-3 flex flex-col justify-center items-center relative">
+                    <input class="opacity-0" type="checkbox" id="toggle">
+                    <label class="flex flex-col justify-center items-center gap-1 absolute group cursor-pointer" for="toggle">
+                        <span class="block rounded-lg w-7 h-1 bg-slate-50 group-hover:bg-slate-500 duration-300 transition-all"></span>
+                        <span class="block rounded-lg w-7 h-1 bg-slate-50 group-hover:bg-slate-500 duration-300 transition-all"></span>
+                        <span class="block rounded-lg w-7 h-1 bg-slate-50 group-hover:bg-slate-500 duration-300 transition-all"></span>
+                    </label>
+                    <ul class="h-screen absolute top-16 ml-12 flex flex-col justify-around items-center text-white bg-neutral-950 px-24 transition-all duration-500 ease-in-out -translate-x-96 rouded-xl xl:hidden">
+                        <li class="groupfont-sans ml-10 text-slate-200 font-semibold text-xl flex flex-row justify-between items-center gap-3 group-hover:text-slate-900 transition-all duration-500"><i style="font-size:1.5rem;" class="fa fa-home" aria-hidden="true"></i><a class="hover:text-slate-400 duration-150 transition-all xl:group-hover:text-slate-400" href="">beranda</a></li>
+                        <li class="groupfont-sans ml-10 text-slate-200 font-semibold text-xl flex flex-row justify-between items-center gap-3 group-hover:text-slate-900 transition-all duration-500"><i style="font-size:1.5rem;" class="fa fa-compress" aria-hidden="true"></i><a class="hover:text-slate-400 duration-150 transition-all xl:group-hover:text-slate-400" href="">shorts</a></li>
+                        <li class="groupfont-sans ml-10 text-slate-200 font-semibold text-xl flex flex-row justify-between items-center gap-3 group-hover:text-slate-900 transition-all duration-500"><i style="font-size:1.5rem;" class="fa fa-youtube" aria-hidden="true"></i><a class="hover:text-slate-400 duration-150 transition-all xl:group-hover:text-slate-400" href="">subscription</a></li>
+                        <!-- <hr> -->
+                        <li class="groupfont-sans ml-10 text-slate-200 font-semibold text-xl flex flex-row justify-between items-center gap-3 group-hover:text-slate-900 transition-all duration-500"><i style="font-size:1.5rem;" class="fa fa-columns" aria-hidden="true"></i><a class="hover:text-slate-400 duration-150 transition-all xl:group-hover:text-slate-400" href="">koleksi</a></li>
+                        <li class="groupfont-sans ml-10 text-slate-200 font-semibold text-xl flex flex-row justify-between items-center gap-3 group-hover:text-slate-900 transition-all duration-500"><i style="font-size:1.5rem;" class="fa fa-history" aria-hidden="true"></i><a class="hover:text-slate-400 duration-150 transition-all xl:group-hover:text-slate-400" href="">histori</a></li>
+                        <li class="groupfont-sans ml-10 text-slate-200 font-semibold text-xl flex flex-row justify-between items-center gap-3 group-hover:text-slate-900 transition-all duration-500"><i style="font-size:1.5rem;" class="fa fa-play" aria-hidden="true"></i><a class="hover:text-slate-400 duration-150 transition-all xl:group-hover:text-slate-400" href="">video anda</a></li>
+                        <li class="groupfont-sans ml-10 text-slate-200 font-semibold text-xl flex flex-row justify-between items-center gap-3 group-hover:text-slate-900 transition-all duration-500"><i style="font-size:1.5rem;" class="fa fa-pause" aria-hidden="true"></i><a class="hover:text-slate-400 duration-150 transition-all xl:group-hover:text-slate-400" href="">tonton nanti</a></li>
+                        <li class="groupfont-sans ml-10 text-slate-200 font-semibold text-xl flex flex-row justify-between items-center gap-3 group-hover:text-slate-900 transition-all duration-500"><i style="font-size:1.5rem;" class="fa fa-thumbs-up" aria-hidden="true"></i><a class="hover:text-slate-400 duration-150 transition-all xl:group-hover:text-slate-400" href="">video yang disukai</a></li>
+                        <li class="groupfont-sans ml-10 text-slate-200 font-semibold text-xl flex flex-row justify-between items-center gap-3 group-hover:text-slate-900 transition-all duration-500"><i style="font-size:1.5rem;" class="fa fa-info" aria-hidden="true"></i><a class="hover:text-slate-400 duration-150 transition-all xl:group-hover:text-slate-400" href="">lebih banyak</a></li>
+                    </ul>
+                </div>
+                <img class="w-18 h-10 ml-5" src="content/youtube.png" alt="">
+                <h1 style="font-family: 'League Gothic', sans-serif; text-transform: capitalize; font-size: 32px; letter-spacing: 1px; color: #fff; text-shadow: 0px 0px 5px #000;">youtube</h1>
+            </div>
+            <div class="flex justify-evenly items-center w-2/4 p-5 relative">
+                <input  style="color: #fff;font-family: 'roboto', sans-serif; font-size: 16px; text-transform: capitalize;" class="block w-5/6 border-solid border-2 border-stone-700 rounded-tl-full rounded-bl-full p-4 bg-neutral-900 sm:w-[75%] lg:w-full sm:rounded-full sm:left-6  lg:mr-28 absolute" type="text" name="search" placeholder="telusuri">
+                <i style="cursor: pointer; color: white; font-size: 1.8rem; padding: 14px; position: absolute; right: -10%;" class="fa fa-search bg-neutral-900 border-solid border-2 border-stone-700 rounded-tr-full rounded-br-full sm:border-none sm:rounded-full sm:hidden lg:block kaca" aria-hidden="true" name="cari"></i>
+                <i style="cursor: pointer; color: white; font-size: 1.8rem; padding: 14px; position: absolute; right: 3.6%;" class="fa fa-search bg-neutral-900 border-solid border-2 border-stone-700 rounded-tr-full rounded-br-full sm:border-none sm:rounded-full sm:w-fit absolute sm:left-52 lg:hidden kaca" aria-hidden="true" name="cari"></i>
+                <i style="cursor: pointer; position: absolute; right: -1%; font-size: 1.5rem; color: white" class="fa fa-microphone sm:hidden lg:block" aria-hidden="true"></i>
+            </div>
+            <div class="flex items-center w-1/6 sm:justify-between sm:mr-8 sm:gap-5 xl:mr-3 xl:justify-center xl:gap-20 relative">
+                <i style="color:white; cursor: pointer;" class="fa fa-video-camera video sm:text-xl xl:text-3xl" aria-hidden="true"></i>
+                <i style="color:white; cursor: pointer;" class="fa fa-bell lonceng sm:text-xl xl:text-3xl" aria-hidden="true"></i>
+                <img id="profil-user" class="w-10 h-10 rounded-full cursor-pointer xl:w-12 xl:h-12 sm:hover:scale-125 duration-150 transition-all" src="content/Pak-Sandhika-Galih.jpg" alt="">
+                <input type="checkbox" id="checklist" class="block absolute right-1 z-50 w-8 h-8 opacity-0 xl:right-11 cursor-pointer">
+            </div>
+
+        </nav>
+        <aside class="width-1/6 bg-neutral-900 aspect-[9/16] absolute top-24 right-0 bottom-0 z-50 h-[70%] translate-x-96 transition-all duration-700">
+            <div class="bg-neutral-900 flex flex-row justify-start gap-5 items-center py-7 pl-10">
+                <img class="rounded-full border-xl" src="content/Pak-Sandhika-Galih.jpg" alt="" width="100";>
+                <div class="flex flex-col justify-center items-center">
+                    <h1 class="capitalize font-sans font-bold text-xl text-slate-100 ">pak sandhika galih</h1>
+                    <a class="capitalize pt-1 font-lg font-sans font-semibold text-sky-500 hover:text-sky-700 transition-all duration-150" href="">user@gmail.com</a>
+                </div>
+            </div>
+
+            <ul class="bg-neutral-900 flex flex-col justify-around items-center h-5/6 py-3">
+                <li class="text-2xl text-slate-100 font-semibold font-sans duration-150 transition-all hover:text-slate-500"><a href="">About</a></li>
+                <li class="text-2xl text-slate-100 font-semibold font-sans duration-150 transition-all hover:text-slate-500"><a href="">Channel</a></li>
+                <li class="text-2xl text-slate-100 font-semibold font-sans duration-150 transition-all hover:text-slate-500"><a href="">History</a></li>
+                <li class="text-2xl text-slate-100 font-semibold font-sans duration-150 transition-all hover:text-slate-500"><a href="">Your Playlist</a></li>
+                <li class="text-2xl text-slate-100 font-semibold font-sans duration-150 transition-all hover:text-slate-500"><a href="">Favorite</a></li>
+            </ul>
+        </aside>
+
+        <div class="bg-neutral-950 flex gap-20 h-screen">
+            <ul class="flex flex-col justify-evenly gap-4 items-center h-full sm:hidden xl:flex xl:h-full">
+                <li class="font-sans ml-10 text-slate-200 font-semibold text-xl flex flex-row justify-between items-center gap-3"><i style="font-size:1.5rem;" class="fa fa-home" aria-hidden="true"></i><a href="">beranda</a></li>
+                <li class="font-sans ml-10 text-slate-200 font-semibold text-xl flex flex-row justify-between items-center gap-3"><i style="font-size:1.5rem;" class="fa fa-compress" aria-hidden="true"></i><a href="">shorts</a></li>
+                <li class="font-sans ml-10 text-slate-200 font-semibold text-xl flex flex-row justify-between items-center gap-3"><i style="font-size:1.5rem;" class="fa fa-youtube" aria-hidden="true"></i><a href="">subscription</a></li>
+                <!-- <hr> -->
+                <li class="font-sans ml-10 text-slate-200 font-semibold text-xl flex flex-row justify-between items-center gap-3"><i style="font-size:1.5rem;" class="fa fa-columns" aria-hidden="true"></i><a href="">koleksi</a></li>
+                <li class="font-sans ml-10 text-slate-200 font-semibold text-xl flex flex-row justify-between items-center gap-3"><i style="font-size:1.5rem;" class="fa fa-history" aria-hidden="true"></i><a href="">histori</a></li>
+                <li class="font-sans ml-10 text-slate-200 font-semibold text-xl flex flex-row justify-between items-center gap-3"><i style="font-size:1.5rem;" class="fa fa-play" aria-hidden="true"></i><a href="">video anda</a></li>
+                <li class="font-sans ml-10 text-slate-200 font-semibold text-xl flex flex-row justify-between items-center gap-3"><i style="font-size:1.5rem;" class="fa fa-pause" aria-hidden="true"></i><a href="">tonton nanti</a></li>
+                <li class="font-sans ml-10 text-slate-200 font-semibold text-xl flex flex-row justify-between items-center gap-3"><i style="font-size:1.5rem;" class="fa fa-thumbs-up" aria-hidden="true"></i><a href="">video yang disukai</a></li>
+                <li class="font-sans ml-10 text-slate-200 font-semibold text-xl flex flex-row justify-between items-center gap-3"><i style="font-size:1.5rem;" class="fa fa-info" aria-hidden="true"></i><a href="">lebih banyak</a></li>
+            </ul>
+            <div class="bg-red-500 w-full xl:w-full">
+                <ul class="bg-neutral-950 text-white p-4 flex flex-row justify-between items-center sm:flex-wrap sm:justify-center sm:gap-3 lg:justify-between ulSecond">
+                    <li class="bg-neutral-800 p-3 rounded-xl font-sans font-semibold text-lg hover:bg-neutral-700 transition-all duration-300 cursor-pointer"><a href="">semua</a></li>
+                    <li class="bg-neutral-800 p-3 rounded-xl font-sans font-semibold text-lg hover:bg-neutral-700 transition-all duration-300 cursor-pointer"><a href="">live</a></li>
+                    <li class="bg-neutral-800 p-3 rounded-xl font-sans font-semibold text-lg hover:bg-neutral-700 transition-all duration-300 cursor-pointer"><a href="">game</a></li>
+                    <li class="bg-neutral-800 p-3 rounded-xl font-sans font-semibold text-lg hover:bg-neutral-700 transition-all duration-300 cursor-pointer"><a href="">mix</a></li>
+                    <li class="bg-neutral-800 p-3 rounded-xl font-sans font-semibold text-lg hover:bg-neutral-700 transition-all duration-300 cursor-pointer"><a href="">musik</a></li>
+                    <li class="bg-neutral-800 p-3 rounded-xl font-sans font-semibold text-lg hover:bg-neutral-700 transition-all duration-300 cursor-pointer"><a href="">berita</a></li>
+                    <li class="bg-neutral-800 p-3 rounded-xl font-sans font-semibold text-lg hover:bg-neutral-700 transition-all duration-300 cursor-pointer"><a href="">matematika</a></li>
+                    <li class="bg-neutral-800 p-3 rounded-xl font-sans font-semibold text-lg hover:bg-neutral-700 transition-all duration-300 cursor-pointer"><a href="">animasi</a></li>
+                    <li class="bg-neutral-800 p-3 rounded-xl font-sans font-semibold text-lg hover:bg-neutral-700 transition-all duration-300 cursor-pointer"><a href="">game petualangan</a></li>
+                    <li class="bg-neutral-800 p-3 rounded-xl font-sans font-semibold text-lg hover:bg-neutral-700 transition-all duration-300 cursor-pointer"><a href="">bisa diupload</a></li>
+                    <li class="bg-neutral-800 p-3 rounded-xl font-sans font-semibold text-lg hover:bg-neutral-700 transition-all duration-300 cursor-pointer"><a href="">ditonton</a></li>
+                </ul>
+                <div class="bg-neutral-950 w-full h-full flex flex-wrap sm:grid sm:grid-cols-1 sm:mx-auto md:grid-cols-2 lg:w-full xl:flex">
+                    <div class=" flex flex-col justify-between items-evenly bg-neutral-950 w-1/5 p-5 sm:flex-col sm:w-full sm:justify-center lg:w-full xl:w-1/5">
+                        <img class="w-full h-2/4 sm:aspect-video sm:mb-10 lg:mb-5 lg:w-full" src="content/Screenshot (27).png" alt="">
+                        <div class="flex justify-between items-center gap-4 lg:hidden">
+                            <img class="w-10 h-10 mt-3 rounded-full sm:mt-1 sm:w-[65px] sm:h-[65px]" src="content/Pak-Sandhika-Galih.jpg" alt="">
+                            <h1 class="text-white mt-3 sm:mt-0 sm:text-xl sm:font-semibold">CARA MEMBUAT WEBSITE KEDAI KOPI DENGAN BANYAK MENGGUNAKAN HTML CSS!!</h1>
+                        </div>
+                        <img class="w-10 h-10 my-2 rounded-full sm:mt-1 sm:w-[65px] sm:h-[65px] sm:hidden lg:inline-block lg:w-10 lg:h-10" src="content/Pak-Sandhika-Galih.jpg" alt="">
+                        <h1 class="text-white mt-3 sm:mt-0 sm:text-xl sm:font-semibold sm:hidden lg:inline lg:mt-3">CARA MEMBUAT WEBSITE KEDAI KOPI DENGAN BANYAK MENGGUNAKAN HTML CSS!!</h1>
+                        <p class="text-white sm:text-lg sm:capitalize sm:mt-3">arjun samudera ahli fikri <br> 55 rb x ditonton - 3 menit yang lalu</p>
+                    </div>
+                    <div class="flex flex-col justify-between items-evenly bg-neutral-950 w-1/5 p-5 sm:flex-col sm:w-full lg:w-full sm:justify-center xl:w-1/5">
+                        <img class="w-full h-2/4 sm:aspect-video sm:mb-10 lg:mb-5" src="content/Screenshot (27).png" alt="">
+                        <div class="flex justify-between items-center gap-4 lg:hidden">
+                            <img class="w-10 h-10 mt-3 rounded-full sm:mt-1 sm:w-[65px] sm:h-[65px]" src="content/Pak-Sandhika-Galih.jpg" alt="">
+                            <h1 class="text-white mt-3 sm:mt-0 sm:text-xl sm:font-semibold">CARA MEMBUAT WEBSITE KEDAI KOPI DENGAN BANYAK MENGGUNAKAN HTML CSS!!</h1>
+                        </div>
+                        <img class="w-10 h-10 my-2 rounded-full sm:mt-1 sm:w-[65px] sm:h-[65px] sm:hidden lg:inline-block lg:w-10 lg:h-10" src="content/Pak-Sandhika-Galih.jpg" alt="">
+                        <h1 class="text-white mt-3 sm:mt-0 sm:text-xl sm:font-semibold sm:hidden lg:inline lg:mt-3">CARA MEMBUAT WEBSITE KEDAI KOPI DENGAN BANYAK MENGGUNAKAN HTML CSS!!</h1>
+                        <p class="text-white sm:text-lg sm:capitalize sm:mt-3">arjun samudera ahli fikri <br> 55 rb x ditonton - 3 menit yang lalu</p>
+                    </div>
+                    <div class=" flex flex-col justify-between items-evenly bg-neutral-950 w-1/5 p-5 sm:flex-col sm:w-full lg:w-full sm:justify-center xl:w-1/5">
+                        <img class="w-full h-2/4 sm:aspect-video sm:mb-10 lg:mb-5" src="content/Screenshot (27).png" alt="">
+                        <div class="flex justify-between items-center gap-4 lg:hidden">
+                            <img class="w-10 h-10 mt-3 rounded-full sm:mt-1 sm:w-[65px] sm:h-[65px]" src="content/Pak-Sandhika-Galih.jpg" alt="">
+                            <h1 class="text-white mt-3 sm:mt-0 sm:text-xl sm:font-semibold">CARA MEMBUAT WEBSITE KEDAI KOPI DENGAN BANYAK MENGGUNAKAN HTML CSS!!</h1>
+                        </div>
+                        <img class="w-10 h-10 my-2 rounded-full sm:mt-1 sm:w-[65px] sm:h-[65px] sm:hidden lg:inline-block lg:w-10 lg:h-10" src="content/Pak-Sandhika-Galih.jpg" alt="">
+                        <h1 class="text-white mt-3 sm:mt-0 sm:text-xl sm:font-semibold sm:hidden lg:inline lg:mt-3">CARA MEMBUAT WEBSITE KEDAI KOPI DENGAN BANYAK MENGGUNAKAN HTML CSS!!</h1>
+                        <p class="text-white sm:text-lg sm:capitalize sm:mt-3">arjun samudera ahli fikri <br> 55 rb x ditonton - 3 menit yang lalu</p>
+                    </div>
+                    <div class=" flex flex-col justify-between items-evenly bg-neutral-950 w-1/5 p-5 sm:flex-col sm:w-full lg:w-full sm:justify-center xl:w-1/5">
+                        <img class="w-full h-2/4 sm:aspect-video sm:mb-10 lg:mb-5" src="content/Screenshot (27).png" alt="">
+                        <div class="flex justify-between items-center gap-4 lg:hidden">
+                            <img class="w-10 h-10 mt-3 rounded-full sm:mt-1 sm:w-[65px] sm:h-[65px]" src="content/Pak-Sandhika-Galih.jpg" alt="">
+                            <h1 class="text-white mt-3 sm:mt-0 sm:text-xl sm:font-semibold">CARA MEMBUAT WEBSITE KEDAI KOPI DENGAN BANYAK MENGGUNAKAN HTML CSS!!</h1>
+                        </div>
+                        <img class="w-10 h-10 my-2 rounded-full sm:mt-1 sm:w-[65px] sm:h-[65px] sm:hidden lg:inline-block lg:w-10 lg:h-10" src="content/Pak-Sandhika-Galih.jpg" alt="">
+                        <h1 class="text-white mt-3 sm:mt-0 sm:text-xl sm:font-semibold sm:hidden lg:inline lg:mt-3">CARA MEMBUAT WEBSITE KEDAI KOPI DENGAN BANYAK MENGGUNAKAN HTML CSS!!</h1>
+                        <p class="text-white sm:text-lg sm:capitalize sm:mt-3">arjun samudera ahli fikri <br> 55 rb x ditonton - 3 menit yang lalu</p>
+                    </div>
+                    <div class=" flex flex-col justify-between items-evenly bg-neutral-950 w-1/5 p-5 sm:flex-col sm:w-full lg:w-full sm:justify-center xl:w-1/5">
+                        <img class="w-full h-2/4 sm:aspect-video sm:mb-10 lg:mb-5" src="content/Screenshot (27).png" alt="">
+                        <div class="flex justify-between items-center gap-4 lg:hidden">
+                            <img class="w-10 h-10 mt-3 rounded-full sm:mt-1 sm:w-[65px] sm:h-[65px]" src="content/Pak-Sandhika-Galih.jpg" alt="">
+                            <h1 class="text-white mt-3 sm:mt-0 sm:text-xl sm:font-semibold">CARA MEMBUAT WEBSITE KEDAI KOPI DENGAN BANYAK MENGGUNAKAN HTML CSS!!</h1>
+                        </div>
+                        <img class="w-10 h-10 my-2 rounded-full sm:mt-1 sm:w-[65px] sm:h-[65px] sm:hidden lg:inline-block lg:w-10 lg:h-10" src="content/Pak-Sandhika-Galih.jpg" alt="">
+                        <h1 class="text-white mt-3 sm:mt-0 sm:text-xl sm:font-semibold sm:hidden lg:inline lg:mt-3">CARA MEMBUAT WEBSITE KEDAI KOPI DENGAN BANYAK MENGGUNAKAN HTML CSS!!</h1>
+                        <p class="text-white sm:text-lg sm:capitalize sm:mt-3">arjun samudera ahli fikri <br> 55 rb x ditonton - 3 menit yang lalu</p>
+                    </div>
+                    <div class=" flex flex-col justify-between items-evenly bg-neutral-950 w-1/5 p-5 sm:flex-col sm:w-full lg:w-full sm:justify-center xl:w-1/5">
+                        <img class="w-full h-2/4 sm:aspect-video sm:mb-10 lg:mb-5" src="content/Screenshot (27).png" alt="">
+                        <div class="flex justify-between items-center gap-4 lg:hidden">
+                            <img class="w-10 h-10 mt-3 rounded-full sm:mt-1 sm:w-[65px] sm:h-[65px]" src="content/Pak-Sandhika-Galih.jpg" alt="">
+                            <h1 class="text-white mt-3 sm:mt-0 sm:text-xl sm:font-semibold">CARA MEMBUAT WEBSITE KEDAI KOPI DENGAN BANYAK MENGGUNAKAN HTML CSS!!</h1>
+                        </div>
+                        <img class="w-10 h-10 my-2 rounded-full sm:mt-1 sm:w-[65px] sm:h-[65px] sm:hidden lg:inline-block lg:w-10 lg:h-10" src="content/Pak-Sandhika-Galih.jpg" alt="">
+                        <h1 class="text-white mt-3 sm:mt-0 sm:text-xl sm:font-semibold sm:hidden lg:inline lg:mt-3">CARA MEMBUAT WEBSITE KEDAI KOPI DENGAN BANYAK MENGGUNAKAN HTML CSS!!</h1>
+                        <p class="text-white sm:text-lg sm:capitalize sm:mt-3">arjun samudera ahli fikri <br> 55 rb x ditonton - 3 menit yang lalu</p>
+                    </div>
+                    <div class=" flex flex-col justify-between items-evenly bg-neutral-950 w-1/5 p-5 sm:flex-col sm:w-full lg:w-full sm:justify-center xl:w-1/5">
+                        <img class="w-full h-2/4 sm:aspect-video sm:mb-10 lg:mb-5" src="content/Screenshot (27).png" alt="">
+                        <div class="flex justify-between items-center gap-4 lg:hidden">
+                            <img class="w-10 h-10 mt-3 rounded-full sm:mt-1 sm:w-[65px] sm:h-[65px]" src="content/Pak-Sandhika-Galih.jpg" alt="">
+                            <h1 class="text-white mt-3 sm:mt-0 sm:text-xl sm:font-semibold">CARA MEMBUAT WEBSITE KEDAI KOPI DENGAN BANYAK MENGGUNAKAN HTML CSS!!</h1>
+                        </div>
+                        <img class="w-10 h-10 my-2 rounded-full sm:mt-1 sm:w-[65px] sm:h-[65px] sm:hidden lg:inline-block lg:w-10 lg:h-10" src="content/Pak-Sandhika-Galih.jpg" alt="">
+                        <h1 class="text-white mt-3 sm:mt-0 sm:text-xl sm:font-semibold sm:hidden lg:inline lg:mt-3">CARA MEMBUAT WEBSITE KEDAI KOPI DENGAN BANYAK MENGGUNAKAN HTML CSS!!</h1>
+                        <p class="text-white sm:text-lg sm:capitalize sm:mt-3">arjun samudera ahli fikri <br> 55 rb x ditonton - 3 menit yang lalu</p>
+                    </div>
+                    <div class=" flex flex-col justify-between items-evenly bg-neutral-950 w-1/5 p-5 sm:flex-col sm:w-full lg:w-full sm:justify-center xl:w-1/5">
+                        <img class="w-full h-2/4 sm:aspect-video sm:mb-10 lg:mb-5" src="content/Screenshot (27).png" alt="">
+                        <div class="flex justify-between items-center gap-4 lg:hidden">
+                            <img class="w-10 h-10 mt-3 rounded-full sm:mt-1 sm:w-[65px] sm:h-[65px]" src="content/Pak-Sandhika-Galih.jpg" alt="">
+                            <h1 class="text-white mt-3 sm:mt-0 sm:text-xl sm:font-semibold">CARA MEMBUAT WEBSITE KEDAI KOPI DENGAN BANYAK MENGGUNAKAN HTML CSS!!</h1>
+                        </div>
+                        <img class="w-10 h-10 my-2 rounded-full sm:mt-1 sm:w-[65px] sm:h-[65px] sm:hidden lg:inline-block lg:w-10 lg:h-10" src="content/Pak-Sandhika-Galih.jpg" alt="">
+                        <h1 class="text-white mt-3 sm:mt-0 sm:text-xl sm:font-semibold sm:hidden lg:inline lg:mt-3">CARA MEMBUAT WEBSITE KEDAI KOPI DENGAN BANYAK MENGGUNAKAN HTML CSS!!</h1>
+                        <p class="text-white sm:text-lg sm:capitalize sm:mt-3">arjun samudera ahli fikri <br> 55 rb x ditonton - 3 menit yang lalu</p>
+                    </div>
+                    <div class=" flex flex-col justify-between items-evenly bg-neutral-950 w-1/5 p-5 sm:flex-col sm:w-full lg:w-full sm:justify-center xl:w-1/5">
+                        <img class="w-full h-2/4 sm:aspect-video sm:mb-10 lg:mb-5" src="content/Screenshot (27).png" alt="">
+                        <div class="flex justify-between items-center gap-4 lg:hidden">
+                            <img class="w-10 h-10 mt-3 rounded-full sm:mt-1 sm:w-[65px] sm:h-[65px]" src="content/Pak-Sandhika-Galih.jpg" alt="">
+                            <h1 class="text-white mt-3 sm:mt-0 sm:text-xl sm:font-semibold">CARA MEMBUAT WEBSITE KEDAI KOPI DENGAN BANYAK MENGGUNAKAN HTML CSS!!</h1>
+                        </div>
+                        <img class="w-10 h-10 my-2 rounded-full sm:mt-1 sm:w-[65px] sm:h-[65px] sm:hidden lg:inline-block lg:w-10 lg:h-10" src="content/Pak-Sandhika-Galih.jpg" alt="">
+                        <h1 class="text-white mt-3 sm:mt-0 sm:text-xl sm:font-semibold sm:hidden lg:inline lg:mt-3">CARA MEMBUAT WEBSITE KEDAI KOPI DENGAN BANYAK MENGGUNAKAN HTML CSS!!</h1>
+                        <p class="text-white sm:text-lg sm:capitalize sm:mt-3">arjun samudera ahli fikri <br> 55 rb x ditonton - 3 menit yang lalu</p>
+                    </div>
+                    <div class=" flex flex-col justify-between items-evenly bg-neutral-950 w-1/5 p-5 sm:flex-col sm:w-full lg:w-full sm:justify-center xl:w-1/5">
+                        <img class="w-full h-2/4 sm:aspect-video sm:mb-10 lg:mb-5" src="content/Screenshot (27).png" alt="">
+                        <div class="flex justify-between items-center gap-4 lg:hidden">
+                            <img class="w-10 h-10 mt-3 rounded-full sm:mt-1 sm:w-[65px] sm:h-[65px]" src="content/Pak-Sandhika-Galih.jpg" alt="">
+                            <h1 class="text-white mt-3 sm:mt-0 sm:text-xl sm:font-semibold">CARA MEMBUAT WEBSITE KEDAI KOPI DENGAN BANYAK MENGGUNAKAN HTML CSS!!</h1>
+                        </div>
+                        <img class="w-10 h-10 my-2 rounded-full sm:mt-1 sm:w-[65px] sm:h-[65px] sm:hidden lg:inline-block lg:w-10 lg:h-10" src="content/Pak-Sandhika-Galih.jpg" alt="">
+                        <h1 class="text-white mt-3 sm:mt-0 sm:text-xl sm:font-semibold sm:hidden lg:inline lg:mt-3">CARA MEMBUAT WEBSITE KEDAI KOPI DENGAN BANYAK MENGGUNAKAN HTML CSS!!</h1>
+                        <p class="text-white sm:text-lg sm:capitalize sm:mt-3">arjun samudera ahli fikri <br> 55 rb x ditonton - 3 menit yang lalu</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

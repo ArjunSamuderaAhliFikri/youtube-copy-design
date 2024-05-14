@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+    darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+      }, fontFamily: {
+        'inter':['Inter', 'sans-serif'],
+      }
+        }
+      }
+    }
+  </script>
+
+    <style type="text/tailwindcss">
+        #toggle:checked ~ label div.toggle-circle {
+            @apply translate-x-6;
+        }
+    </style>
+</head>
+<body class="dark:bg-slate-900 dark:text-slate-200">
+    <div>
+        <ul>
+            <li><a href="">arjun</a></li>
+            <li><a href="">arjun</a></li>
+            <li><a href="">arjun</a></li>
+            <li><a href="">arjun</a></li>
+            <li><a href="">arjun</a></li>
+        </ul>
+    </div>
+
+    <div class="max-w-lg bg-sky-500 rounded-xl shadow-lg shadow-sky-200 border border-sky-200 mx-auto my-10 p-5 hover:bg-sky-800 group">
+        <h1 class="font-sans font-bold text-2xl mb-3 bg-gradient-to-r from-sky-50 via-cyan-50 to-sky-50 bg-clip-text text-transparent group-hover:text-slate-800">Hello, TailwindCSS</h1>
+        <p class="font-semibold text-lg text-white font-sans group-hover:text-slate-800 selection:bg-red-500 selection:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure fugiat dolores error? Distinctio architecto, saepe itaque harum, quisquam libero laborum quaerat hic accusamus ipsa quis fugit reiciendis eum modi nesciunt dolore? Aliquam iusto dolorum ad.</p>
+    </div>
+
+
+    <div class="max-w-lg p-5 rounded-lg border border-neutral-500 mx-auto mt-[90px] bg-gradient-to-br from-teal-500 via-cyan-400 to-sky-500 shadow-lg shadow-neutral-800">
+        <form action="">
+            <label for="email">
+                <span class="block font-bold mb-3 bg-gradient-to-tl from-neutral-500 via-stone-800 to-neutral-900 bg-clip-text text-transparent after:content-['*'] after:text-red-500 after:ml-1 after:text-md">Username</span>
+                <input class="block px-2 py-3 rounded-lg w-full border border-sky-300 focus:outline-none focus:ring-2 focus:ring-neutral-900 placeholder:text-md invalid:text-red-500 dark:text-slate-950 peer" type="email" placeholder="masukkan email" id="email">
+                <p class="invisible text-sm mt-2 ml-2 text-red-600 peer-invalid:visible">email yang anda masukkan salah!</p>
+            </label>
+        </form>
+    </div>
+
+        <div class="dark:text-black w-1/6 p-7 bg-gradient-to-bl from-sky-300 via-white to-cyan-600 flex flex-row justify-center items-center my-20 rounded-xl">
+            <span class="block">light</span>
+            <input type="checkbox" id="toggle" class="opacity-0">
+            <label for="toggle">
+                <div class="overflow-hidden flex items-center w-12 h-7 bg-slate-600 rounded-full border border-slate-300 shadow-md shadow-slate-400">
+                    <div class="w-5 h-5 bg-slate-800 rounded-full toggle-circle"></div>
+                </div>
+            </label>
+            <span class="block ml-3">dark</span>
+        </div>
+         
+            <div>
+                <div class="w-32 h-12 bg-sky-500 rounded-xl animate-ping"></div>
+                <button class="block animate-geser shadow-lg shadow-slate-700 px-5 py-2 bg-sky-300 my-10 mx-auto text-slate-800 rounded-xl uppercase hover:bg-sky-500 hover:text-white" type="button">click here</button>
+            </div>
+
+                <div class="w-52 h-52 bg-emerald-700 shadow-lg shadow-emerald-300 rounded-lg mx-auto my-20 animate-wiggle"></div>
+
+            <button class="flex items-center uppercase text-slate-100 bg-sky-400 p-5 rounded-2xl mx-auto my-20 hover:bg-sky-600" type="button">
+                <div class="animate-spin ease-in-out w-8 h-8 rounded-full bg-gradient-to-t from-black via-slate-50 to-slate-50 flex justify-center items-center border-sky-800 mx-2">
+                    <div class="w-6 h-6 bg-sky-400 rounded-full border-3 border-sky-800"></div>
+                </div>
+                progressing...
+            </button>
+
+            <hr class="my-20 border-t-slate-950">
+            <div class="container bg-gradient p-10 mx-auto">
+                <div class="container rounded-xl p-8 bg-gradient-to-tl from-emerald-900 via-emerald-500 to-emerald-700">
+                <img class="w-44 inline-block mt-5 rounded-xl shadow-lg lg:block lg:w-1/4 lg:mx-auto group-lg:justify-center" src="https://source.unsplash.com/200x200" alt="">
+                <h1 class="font-sans font-bold text-xl text-slate-200 mt-5">Bersama Arjun Samudera Ahli Fikri <br><span class="bg-gradient-to-br from-teal-500 via-teal-700 to-teal-900 bg-clip-text text-transparent">Fullstack</span> Web Developer</h1>
+                <p class="font-sans mt-3 text-slate-200 text-sm ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta modi iure, facilis odio quod laudantium quia reprehenderit consectetur repellendus sequi aliquid veritatis sapiente minus dolorum esse eum, accusantium culpa. Voluptatem, modi sit iure accusamus ullam praesentium commodi laborum esse temporibus ipsum ducimus iusto. Nihil harum inventore deleniti accusamus voluptas eum.</p>
+                <div>
+                    <button class="mt-5 ml-2 uppercase bg-green-500 px-1 py-1 rounded-md shadow-lg text-slate-200 text-sm" type="button">order now!</button>
+                    <button class="mt-5 ml-10 uppercase bg-green-500 px-1 py-1 rounded-md shadow-lg text-slate-200 text-sm" type="button">pre order?</button>
+                </div>
+            </div>
+            </div>
+
+
+
+<!-- Card sepatu -->
+            <div class="container max-w-full px-6 mx-auto flex flex-wrap gap-7 justify-evenly items-center bg-slate-600 md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 xl:grid-cols-4">
+                <div class="bg-gradient-to-br from-slate-300 via-slate-400 to-slate-600 font-inter rounded-lg shadow-lg shadow-black border-black max-w-md mx-auto p-5 overflow-hidden md:max-w-full md:p-0 duration-75 hover:transition hover:-translate-y-5 hover:delay-75 hover:ease-in-out">
+                    <div class="w-full">
+                        <img class="block object-cover rounded-lg md:w-full md:flex-1" src="content/domino-164_6wVEHfI-unsplash.jpg" alt="shoes">
+                    </div>
+                    <div class="w-[88px] bg-slate-600 rounded-lg m-3 p-[4px] cursor-pointer md:hidden">
+                        <div class="w-full"><span class="text-xl">⭐</span> <span class="inter text-xl font-bold text-white">Star</span></div>
+                    </div>
+                    <div class="w-full">
+                        <div class="text-red-600 font-bold text-xl mt-2 ml-2 md:text-2xl md:mt-4 md:ml-4">sneakers red shoes <strong class="uppercase">limited edition!</strong></div>
+                        <p class="text-lg text-slate-950 ml-2 mt-1 md:text-md md:ml-4 md:mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita impedit quas quo debitis sit obcaecati.</p>
+                        <div class="flex flex-row justify-evenly items-center mt-2 overflow-hidden sm:hidden md:flex md:mt-5">
+                            <i style="font-size: 2rem; display: block; margin-right: 5px; cursor: pointer;" class="fa-solid fa-shop"></i>
+                            <i style="font-size: 2rem; display: block; margin-right: 5px; cursor: pointer;" class="fa-solid fa-cart-shopping"></i>
+                            <button class="w-full text-white uppercase px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-600 hover:text-slate-100 md:w-1/2" type="button">buy now!</button>
+                    </div>
+                    </div>
+                    <hr class="my-4 border-t-2 border-t-slate-600">
+                    <div class="mt-2 overflow-hidden sm:flex sm:flex-row sm:justify-evenly sm:items-center md:hidden">
+                            <i style="font-size: 2rem; display: block; margin-right: 5px; cursor: pointer;" class="fa-solid fa-shop"></i>
+                            <i style="font-size: 2rem; display: block; margin-right: 5px; cursor: pointer;" class="fa-solid fa-cart-shopping"></i>
+                            <button class="w-full text-white uppercase px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-600 hover:text-slate-100" type="button">buy now!</button>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-slate-300 via-slate-400 to-slate-600 font-inter rounded-lg shadow-lg shadow-black border-black max-w-md mx-auto p-5 overflow-hidden md:max-w-full md:p-0">
+                    <div class="w-full">
+                        <img class="block object-cover rounded-lg md:w-full md:flex-1" src="content/domino-164_6wVEHfI-unsplash.jpg" alt="shoes">
+                    </div>
+                    <div class="w-[88px] bg-slate-600 rounded-lg m-3 p-[4px] cursor-pointer md:hidden">
+                        <div class="w-full"><span class="text-xl">⭐</span> <span class="inter text-xl font-bold text-white">Star</span></div>
+                    </div>
+                    <div class="w-full">
+                        <div class="text-red-600 font-bold text-xl mt-2 ml-2 md:text-2xl md:mt-4 md:ml-4">sneakers red shoes <strong class="uppercase">limited edition!</strong></div>
+                        <p class="text-lg text-slate-950 ml-2 mt-1 md:text-md md:ml-4 md:mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita impedit quas quo debitis sit obcaecati.</p>
+                        <div class="flex flex-row justify-evenly items-center mt-2 overflow-hidden sm:hidden md:flex md:mt-5">
+                            <i style="font-size: 2rem; display: block; margin-right: 5px; cursor: pointer;" class="fa-solid fa-shop"></i>
+                            <i style="font-size: 2rem; display: block; margin-right: 5px; cursor: pointer;" class="fa-solid fa-cart-shopping"></i>
+                            <button class="w-full text-white uppercase px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-600 hover:text-slate-100 md:w-1/2" type="button">buy now!</button>
+                    </div>
+                    </div>
+                    <hr class="my-4 border-t-2 border-t-slate-600">
+                    <div class="mt-2 overflow-hidden sm:flex sm:flex-row sm:justify-evenly sm:items-center md:hidden">
+                            <i style="font-size: 2rem; display: block; margin-right: 5px; cursor: pointer;" class="fa-solid fa-shop"></i>
+                            <i style="font-size: 2rem; display: block; margin-right: 5px; cursor: pointer;" class="fa-solid fa-cart-shopping"></i>
+                            <button class="w-full text-white uppercase px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-600 hover:text-slate-100" type="button">buy now!</button>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-slate-300 via-slate-400 to-slate-600 font-inter rounded-lg shadow-lg shadow-black border-black max-w-md mx-auto p-5 overflow-hidden md:max-w-full md:p-0">
+                    <div class="w-full">
+                        <img class="block object-cover rounded-lg md:w-full md:flex-1" src="content/domino-164_6wVEHfI-unsplash.jpg" alt="shoes">
+                    </div>
+                    <div class="w-[88px] bg-slate-600 rounded-lg m-3 p-[4px] cursor-pointer md:hidden">
+                        <div class="w-full"><span class="text-xl">⭐</span> <span class="inter text-xl font-bold text-white">Star</span></div>
+                    </div>
+                    <div class="w-full">
+                        <div class="text-red-600 font-bold text-xl mt-2 ml-2 md:text-2xl md:mt-4 md:ml-4">sneakers red shoes <strong class="uppercase">limited edition!</strong></div>
+                        <p class="text-lg text-slate-950 ml-2 mt-1 md:text-md md:ml-4 md:mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita impedit quas quo debitis sit obcaecati.</p>
+                        <div class="flex flex-row justify-evenly items-center mt-2 overflow-hidden sm:hidden md:flex md:mt-5">
+                            <i style="font-size: 2rem; display: block; margin-right: 5px; cursor: pointer;" class="fa-solid fa-shop"></i>
+                            <i style="font-size: 2rem; display: block; margin-right: 5px; cursor: pointer;" class="fa-solid fa-cart-shopping"></i>
+                            <button class="w-full text-white uppercase px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-600 hover:text-slate-100 md:w-1/2" type="button">buy now!</button>
+                    </div>
+                    </div>
+                    <hr class="my-4 border-t-2 border-t-slate-600">
+                    <div class="mt-2 overflow-hidden sm:flex sm:flex-row sm:justify-evenly sm:items-center md:hidden">
+                            <i style="font-size: 2rem; display: block; margin-right: 5px; cursor: pointer;" class="fa-solid fa-shop"></i>
+                            <i style="font-size: 2rem; display: block; margin-right: 5px; cursor: pointer;" class="fa-solid fa-cart-shopping"></i>
+                            <button class="w-full text-white uppercase px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-600 hover:text-slate-100" type="button">buy now!</button>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-slate-300 via-slate-400 to-slate-600 font-inter rounded-lg shadow-lg shadow-black border-black max-w-md mx-auto p-5 overflow-hidden md:max-w-full md:p-0">
+                    <div class="w-full">
+                        <img class="block object-cover rounded-lg md:w-full md:flex-1" src="content/domino-164_6wVEHfI-unsplash.jpg" alt="shoes">
+                    </div>
+                    <div class="w-[88px] bg-slate-600 rounded-lg m-3 p-[4px] cursor-pointer md:hidden">
+                        <div class="w-full"><span class="text-xl">⭐</span> <span class="inter text-xl font-bold text-white">Star</span></div>
+                    </div>
+                    <div class="w-full">
+                        <div class="text-red-600 font-bold text-xl mt-2 ml-2 md:text-2xl md:mt-4 md:ml-4">sneakers red shoes <strong class="uppercase">limited edition!</strong></div>
+                        <p class="text-lg text-slate-950 ml-2 mt-1 md:text-md md:ml-4 md:mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita impedit quas quo debitis sit obcaecati.</p>
+                        <div class="flex flex-row justify-evenly items-center mt-2 overflow-hidden sm:hidden md:flex md:mt-5">
+                            <i style="font-size: 2rem; display: block; margin-right: 5px; cursor: pointer;" class="fa-solid fa-shop"></i>
+                            <i style="font-size: 2rem; display: block; margin-right: 5px; cursor: pointer;" class="fa-solid fa-cart-shopping"></i>
+                            <button class="w-full text-white uppercase px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-600 hover:text-slate-100 md:w-1/2" type="button">buy now!</button>
+                    </div>
+                    </div>
+                    <hr class="my-4 border-t-2 border-t-slate-600">
+                    <div class="mt-2 overflow-hidden sm:flex sm:flex-row sm:justify-evenly sm:items-center md:hidden">
+                            <i style="font-size: 2rem; display: block; margin-right: 5px; cursor: pointer;" class="fa-solid fa-shop"></i>
+                            <i style="font-size: 2rem; display: block; margin-right: 5px; cursor: pointer;" class="fa-solid fa-cart-shopping"></i>
+                            <button class="w-full text-white uppercase px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-600 hover:text-slate-100" type="button">buy now!</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+           <div class="my-20"></div>
+
+           <div class="grid grid-cols-2 gap-10 md:grid-cols-4 md:gap-3">
+            <h1 class="aspect-[4/3] font-bold text-lg text-slate-800 font-inter capitalize md:aspect-[3/4] md:col-start-2 md:row-start-2 md:flex"><span class="self-center text-cetb">fullstack webdev</span></h1>
+            <h1 class="aspect-[4/3] font-semibold text-md text-slate-600 font-inter capitalize md:aspect-[3/4] md:row-start-3 md:flex"><span class="self-center">@arjunsaf717</span></h1>
+            <div class="bg-cyan-500 rounded-lg aspect-[4/3] overflow-hidden md:aspect-[3/4] group relative hover:scale-95 transition-all duration-500">
+                <div class="w-full h-full bg-[url('content/kopikita.jpg')] bg-cover bg-center group-hover:scale-150 group-hover:-rotate-[15deg] group-hover:cursor-pointer transition-all duration-500 absolute"></div>
+            </div>
+            <div class="bg-cyan-500 rounded-lg aspect-[4/3] md:aspect-[3/4] group relative overflow-hidden hover:scale-95 transition-all duration-500">
+                <div class="w-full h-full bg-[url('content/kopikita.jpg')] bg-cover bg-center absolute group-hover:scale-150 group-hover:-rotate-[15deg] transition-all duration-500"></div>
+            </div>
+            <div class="bg-cyan-500 rounded-lg aspect-[4/3] overflow-hidden md:aspect-[3/4] group relative hover:scale-95 transition-all duration-500">
+                <div class="w-full h-full bg-[url('content/kopikita.jpg')] bg-cover bg-center absolute group-hover:scale-150 group-hover:-rotate-[15deg] transition-all duration-500"></div>
+            </div>
+            <div class="bg-cyan-500 rounded-lg aspect-[4/3] md:aspect-[3/4] overflow-hidden relative group hover:scale-95 transition-all duration-500">
+                <div class="w-full h-full bg-[url('content/kopikita.jpg')] bg-cover bg-center absolute group-hover:scale-150 group-hover:-rotate-[15deg] transition-all duration-500"></div>
+            </div>
+            <div class="bg-cyan-500 rounded-lg aspect-[4/3] md:aspect-[3/4] overflow-hidden relative group hover:scale-95 transition-all duration-500">
+                <div class="w-full h-full bg-[url('content/kopikita.jpg')] bg-cover bg-center absolute group-hover:scale-150 group-hover:-rotate-[15deg] transition-all duration-500"></div>
+            </div>
+            <div class="bg-cyan-500 rounded-lg aspect-[4/3] md:aspect-[3/4] overflow-hidden group relative hover:scale-95 transition-all duration-500">
+                <div class="w-full h-full bg-[url('content/kopikita.jpg')] bg-cover bg-center absolute group-hover:scale-150 group-hover:-rotate-[15deg] transition-all duration-500"></div>
+            </div>
+            <div class="bg-cyan-500 rounded-lg aspect-[4/3] md:aspect-[3/4] overflow-hidden group relative hover:scale-95 transition-all duration-500">
+                <div class="w-full h-full bg-[url('content/kopikita.jpg')] bg-cover bg-center absolute group-hover:scale-150 group-hover:-rotate-[15deg] transition-all duration-500"></div>
+            </div>
+            <div class="bg-cyan-500 rounded-lg aspect-[4/3] md:aspect-[3/4] overflow-hidden relative group hover:scale-95 transition-all duration-500">
+                <div class="w-full h-full bg-[url('content/kopikita.jpg')] bg-cover bg-center absolute group-hover:scale-150 group-hover:-rotate-[15deg] transition-all duration-500"></div>
+            </div>
+           </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="toggle.js"></script>
+</body>
+</html>
